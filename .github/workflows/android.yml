@@ -20,10 +20,10 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: cd src/RyujinxAndroid/app/ && chmod +x gradlew
+      run: chmod +x src/RyujinxAndroid/app/gradlew
 
     - name: Build with Gradle
-      run: cd src/RyujinxAndroid/app/ && ./gradlew build
+      run: cd src/RyujinxAndroid/ && ./gradlew build
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
