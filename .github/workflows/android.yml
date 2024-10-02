@@ -25,7 +25,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
-
+        
+    - name: Set up Android NDK
+      uses: actions/setup-ndk@v2
+      with:
+        ndk-version: '21.0.6113669'
+        
     - name: Grant execute permission for gradlew
       run: chmod +x src/RyujinxAndroid/gradlew
 
